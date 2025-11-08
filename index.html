@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/horsey.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/ol-search-layer.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        #map {
+            width: 900px;
+            height: 627px;
+        }
+        .ol-popup {
+
+			max-width: 300px !important;
+
+			max-height: 200px !important;
+
+			overflow-y: auto !important;
+
+			font-size: 13px;
+
+			padding: 10px;
+
+		}
+        </style>
+        <style>
+
+        #popup-content table {
+
+        width: 100%;
+
+        border-collapse: collapse;
+
+        }
+       #popup-content table td {
+
+       padding: 4px 8px;
+
+       border-bottom: 1px solid #dddddd;
+
+       vertical-align: top;
+
+       font-size: 13px;
+
+       }
+       #popup-content table td:first-child {
+
+      font-weight: bold;
+
+      color: #555;
+
+      width: 40%;
+      }
+      #logo-container {
+
+      position: absolute;
+
+      bottom: 10px;
+
+      left: 10px;
+
+      z-index: 9999;
+
+      background-color: rgba(255, 255, 255, 0.8);
+
+      padding: 6px 10px;
+
+      border-radius: 8px;
+
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+      }
+
+     #logo {
+
+     height: 50px;
+
+     width: auto;
+
+     }
+
+     </style>
+        <title></title>
+    </head>
+    <body>
+        <!-- LOGO INSTITUCIONAL UPN -->
+
+        <div id="logo-container">
+
+        <a href="https://www.upn.edu.pe/" target="_blank">
+
+        <img src="https://www.upn.edu.pe/sites/default/files/styles/max_650x650/public/2021-09/upn_nw_rebranding_27_sep.png?itok=vyyV8qKe" alt="Logo UPN" id="logo">
+
+        < /a>
+
+        </div>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="resources/horsey.min.js"></script>
+        <script src="resources/ol-search-layer.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="layers/Departamento_1.js"></script>
+        <script src="styles/Departamento_1_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>
+    </body>
+</html>
